@@ -11,20 +11,20 @@ class TestSnackCreateUpdateDelete(TestCase):
     def test_snack_create(self):
         response = self.client.post(
             reverse("snack_create"),
-            {'title': "create_snack", "description": "create_description", "purchaser": self.purchaser},
+            {'title': "create_snack", "description": "create_description", "purchaser": self.purchaser.id},
             follow=True
         )
 
-        # self.assertRedirects(response, reverse('snack_detailed', kwargs={"pk": "2"}))
+        self.assertRedirects(response, reverse('snack_detailed', kwargs={"pk": "2"}))
         self.assertContains(response, "create_snack")
 
     def test_snack_update(self):
         response = self.client.post(
             reverse("snack_update", kwargs={"pk": self.snack.id}),
-            {'title': "update_snack", "description": "update_description", "purchaser": self.purchaser},
+            {'title': "update_snack", "description": "update_description", "purchaser": self.purchaser.id},
             follow=True
         )
-        # self.assertRedirects(response, reverse('snacks_list'), target_status_code=200)
+        self.assertRedirects(response, reverse('snacks_list'), target_status_code=200)
         self.assertContains(response, "update_snack")
 
     def test_snack_delete(self):

@@ -35,4 +35,4 @@ class SnackUpdateView(edit.UpdateView):
     model = Snack
     fields = ["title", 'description', "purchaser"]
     context_object_name = "snack_update"
-    success_url = reverse_lazy("snacks_list")
+    # success_url = reverse_lazy("snacks_list")
