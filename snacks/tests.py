@@ -14,7 +14,8 @@ class TestSnackCreateUpdateDelete(TestCase):
             {'title': "create_snack", "description": "create_description", "purchaser": self.purchaser},
             follow=True
         )
-        # self.assertRedirects(response, self.snack.get_absolute_url())
+
+        # self.assertRedirects(response, reverse('snack_detailed', kwargs={"pk": "2"}))
         self.assertContains(response, "create_snack")
 
     def test_snack_update(self):
