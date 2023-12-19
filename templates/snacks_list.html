@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+        <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <h1>All Snacks</h1>
+            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+              {% for snack in snacks_list %}
+                  <li>
+                    <a href="{% url 'snack_detailed' snack.pk %}" class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{ snack.title }}</a>
+                    </li>
+              {% endfor %}
+            </ul>
+            <a href='{% url "snack_create" %}'>Add new snack</a>
+          </div>
+        </div>
+      </nav>
+{% endblock content %}
