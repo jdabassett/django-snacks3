@@ -1,97 +1,77 @@
-[//]: # (# LAB: Class 26)
+# LAB: Class 28
 
-[//]: # ()
-[//]: # (## Project: Intro to Django)
 
-[//]: # ()
-[//]: # (## Author: Jacob Bassett)
+## Project: Working Forms
 
-[//]: # ()
-[//]: # (## Resources:)
 
-[//]: # ()
-[//]: # ([Assignment]&#40;https://canvas.instructure.com/courses/7689176/assignments/40391850&#41;)
+## Author: Jacob Bassett
 
-[//]: # ()
-[//]: # ([Flowbite]&#40;https://flowbite.com/docs/getting-started/django/&#41;)
 
-[//]: # ()
-[//]: # ()
-[//]: # (## Installation)
+## Description: 
 
-[//]: # ()
-[//]: # (Run the following in the terminal while in project's root directory. For macOS.)
+This is our first project developing with forms with Django.
 
-[//]: # ()
-[//]: # (```bash)
 
-[//]: # (git clone "...url")
+## Installation
 
-[//]: # (cd django-snacks)
 
-[//]: # (python3.? -m venv .venv)
+Run the following in the terminal while in project's root directory. For macOS.
 
-[//]: # (source .venv/bin/activate)
 
-[//]: # (pip install -r requirements.txt)
+```bash
 
-[//]: # (python manage.py migrate)
+git clone "...url"
 
-[//]: # (python manage.py runserver)
+cd django-snacks
 
-[//]: # (```)
+python3.? -m venv .venv
 
-[//]: # ()
-[//]: # (Open browser and proceed to "http://127.0.0.1:8000/home" or "http://127.0.0.1:8000/about".)
+source .venv/bin/activate
 
-[//]: # ()
-[//]: # (## Requirements.txt)
+pip install -r requirements.txt
 
-[//]: # (asgiref==3.7.2)
+python manage.py migrate
 
-[//]: # ()
-[//]: # (Django==5.0)
+python manage.py runserver
 
-[//]: # ()
-[//]: # (django-appconf==1.0.6)
+```
 
-[//]: # ()
-[//]: # (django-compressor==4.4)
 
-[//]: # ()
-[//]: # (rcssmin==1.1.1)
+Open browser and proceed to "http://127.0.0.1:8000/home" or "http://127.0.0.1:8000/about".
 
-[//]: # ()
-[//]: # (rjsmin==1.2.1)
 
-[//]: # ()
-[//]: # (sqlparse==0.4.4)
+## Requirements.txt
 
-[//]: # ()
-[//]: # (## Tests)
+asgiref==3.7.2
 
-[//]: # ()
-[//]: # (Run the following in the terminal while in project's root directory and the virtual environment is active. For macOS.)
+Django==5.0
 
-[//]: # ()
-[//]: # (```bash)
+django-appconf==1.0.6
 
-[//]: # (python manage.py test)
+django-compressor==4.4
 
-[//]: # ()
-[//]: # (# expected)
+rcssmin==1.1.1
 
-[//]: # (Found 10 test&#40;s&#41;.)
+rjsmin==1.2.1
 
-[//]: # (System check identified no issues &#40;0 silenced&#41;.)
+sqlparse==0.4.4
 
-[//]: # (..........)
 
-[//]: # (----------------------------------------------------------------------)
+## Tests
 
-[//]: # (Ran 10 tests in 0.012s)
 
-[//]: # ()
-[//]: # (OK)
+Run the following in the terminal while in project's root directory and the virtual environment is active. For macOS.
 
-[//]: # (```)
+
+```bash
+(.venv) ➜  django-snacks3 git:(main) ✗ python3.11 manage.py test
+Found 5 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.799s
+
+OK
+Destroying test database for alias 'default'...
+```
